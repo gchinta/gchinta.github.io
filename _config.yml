@@ -1,1 +1,4 @@
 theme: jekyll-theme-minimal
+permalink: /:categories/:year/:month/:title/
+title: Gautam Chinta
+description: Gautam's website
