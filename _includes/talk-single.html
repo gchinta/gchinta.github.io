@@ -1,0 +1,21 @@
+{% assign post = include.post %}
+
+<div class="talk-item">
+  {% if post.title %}
+    {{ post.title }}.
+  {% endif %}
+  <br>
+
+  {% if post.eventurl %}
+    <a href="{{ post.eventurl }}"><em>{{ post.event }}</em></a>
+  {% elsif post.event %}
+    <em>{{ post.event }}</em>
+  {% endif %}
+  {% if post.location %}, {{ post.location }}{% endif %}
+  {% if post.year %}, {{ post.year }}{% endif %}.
+  <br>
+
+  {% if post.slidesurl %}
+    <a href="{{ post.slidesurl }}">Slides</a>
+  {% endif %}
+</div>

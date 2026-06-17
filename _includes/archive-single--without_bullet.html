@@ -1,0 +1,9 @@
+{% assign post = include.post %}
+<div class="publication">
+  {{ post.title }}<br>
+  {{ post.authors }}<br>
+  <em>{{ post.journal }}</em>{% if post.volume and post.volume != "" %} {{ post.volume }}{% endif %}{% if post.number and post.number != "" %}({{ post.number }}){% endif %}{% if post.pages and post.pages != "" %}, {{ post.pages }}{% endif %}{% if post.year and post.year != "" %}, {{ post.year }}{% endif %}.<br>
+  {% assign sep = "" %}
+  {% if post.arxiv and post.arxiv != "" %}<a href="{{ post.arxiv }}">arXiv</a>{% assign sep = " | " %}{% elsif post.paperurl and post.paperurl != "" %}<a href="{{ post.paperurl }}">PDF</a>{% assign sep = " | " %}{% endif %}
+  {% if post.doi and post.doi != "" %}{{ sep }}<a href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
+</div>

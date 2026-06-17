@@ -1,0 +1,52 @@
+title: "My Site"
+description: "Academic website"
+
+url: ""
+baseurl: ""
+#  THIS IS THE CRITICAL FIX
+remote_theme: mmistakes/minimal-mistakes
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+#  Required for your pages folder
+include:
+  - _pages
+
+#  Styling
+minimal_mistakes_skin: default
+
+#  Collections (for publications)
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+
+#  Clean footer
+footer:
+  links: []
+
+atom_feed:
+  hide: true
+
+#  Sidebar profile
+# My site is currently using the Minimal Mistakes remote theme, not the full
+# Academic Pages custom sidebar include. The Academic Pages sidebar template
+# has explicit logic for fields like author.orcid and author.googlescholar
+# that's why  I need links workaround
+
+author:
+  name: "Gautam Chinta"
+  avatar: "/assets/images/profile.png"
+  bio: "Professor of Mathematics"
+  email: "gchinta@ccny.cuny.edu"
+
+  links:
+    - label: "ORCID"
+      icon: "fa-brands fa-orcid"
+      url: "https://orcid.org/0000-0002-2672-3819"
+
+#    - label: "Google Scholar"
+#      icon: "fas fa-graduation-cap"
+#      url: "https://scholar.google.com/citations?user=YOUR_ID"

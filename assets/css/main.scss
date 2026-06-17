@@ -1,0 +1,139 @@
+---
+---
+
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+/* =========================
+   GLOBAL SCALE
+========================= */
+
+html {
+  font-size: 14px !important;
+}
+
+/* =========================
+   WIDTH / CENTERING
+========================= */
+
+.masthead__inner-wrap,
+.page,
+.page__inner-wrap {
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* =========================
+   NAVBAR: FORCE LINKS LEFT
+========================= */
+
+/* outer nav container */
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* THIS is the real menu list */
+.greedy-nav .visible-links {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-left: 0 !important;   /* critical */
+  padding-left: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+/* keep the mobile toggle pushed away */
+.greedy-nav__toggle {
+  margin-left: auto !important;
+}
+
+/* nav link sizing */
+.greedy-nav a {
+  padding: 0.3em 0.6em !important;
+  font-size: 0.85em !important;
+}
+
+/* =========================
+   SINGLE LAYOUT: FIX SIDEBAR + MAIN COLUMN
+========================= */
+
+@media (min-width: 64em) {
+  /* the sidebar and article are siblings inside #main */
+  .layout--single #main {
+    display: flex !important;
+    align-items: flex-start !important;   /* keeps page title at top */
+    gap: 32px !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .layout--single .sidebar {
+    flex: 0 0 230px !important;
+    width: 230px !important;
+    float: none !important;
+    margin-top: 0 !important;
+  }
+
+  .layout--single .page {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    float: none !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================
+   SIDEBAR STYLE
+========================= */
+
+.sidebar {
+  font-size: 0.85em !important;
+}
+
+.author__avatar img {
+  max-width: 120px !important;
+  border-radius: 0 !important;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.page__content {
+  line-height: 1.4 !important;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #2d5c9c !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   PUBLICATIONS
+========================= */
+
+.publication {
+  margin-bottom: 0.4em !important;
+  padding-left: 1.5em !important;
+  text-indent: -1.5em !important;
+  line-height: 1.25 !important;
+}
+
+/* =========================
+   REMOVE FOOTER
+========================= */
+
+.page__footer {
+  display: none !important;
+}
+

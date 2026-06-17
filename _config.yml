@@ -1,0 +1,50 @@
+title: "My Site"
+description: "Academic website"
+url: ""
+baseurl: ""
+
+# Theme
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# Required for your pages folder
+include:
+  - _pages
+
+# Styling
+minimal_mistakes_skin: default
+
+# Collections (for publications and teaching for now)
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+
+# Clean footer
+footer:
+  links: []
+atom_feed:
+  hide: true
+
+# Sidebar profile
+author:
+  name: "Gautam Chinta"
+  avatar: "/assets/images/profile.png"
+  bio: "Professor of Mathematics"
+  email: "gchinta@ccny.cuny.edu"
+  links:
+    - label: "CCNY Dept. of Math"
+      icon: "fas fa-link"
+      url: "https://math.sci.ccny.cuny.edu/"
+    - label: "ORCID"
+      icon: "fa-brands fa-orcid"
+      url: "https://orcid.org/0000-0002-2672-3819"
+
+# - label: "Google Scholar"
+#   icon: "fas fa-graduation-cap"
+#   url: "https://scholar.google.com/citations?user=YOUR_ID"

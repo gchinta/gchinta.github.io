@@ -1,0 +1,25 @@
+{% assign post = include.post %}
+
+<div class="teaching-item">
+  {% if post.title %}
+    {{ post.title }}.
+  {% endif %}
+  <br>
+
+  {% if post.term %}
+    {{ post.term }}{% if post.institution %}, {{ post.institution }}{% endif %}.
+  {% endif %}
+  <br>
+
+  {% assign has_link = false %}
+
+  {% if post.courseurl %}
+    <a href="{{ post.courseurl }}">Course Page</a>
+    {% assign has_link = true %}
+  {% endif %}
+
+  {% if post.materialsurl %}
+    {% if has_link %} | {% endif %}
+    <a href="{{ post.materialsurl }}">Materials</a>
+  {% endif %}
+</div>
