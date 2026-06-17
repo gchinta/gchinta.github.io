@@ -8,8 +8,9 @@
    GLOBAL SCALE
 ========================= */
 
+/* 33% larger than your current 14px baseline */
 html {
-  font-size: 14px !important;
+  font-size: 18.62px !important;
 }
 
 /* =========================
@@ -93,9 +94,14 @@ html {
   font-size: 0.85em !important;
 }
 
+/* Oval profile image */
 .author__avatar img {
+  width: 120px !important;
   max-width: 120px !important;
-  border-radius: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  border-radius: 50% / 40% !important;
+  display: block !important;
 }
 
 /* =========================
@@ -136,4 +142,3 @@ a:hover {
 .page__footer {
   display: none !important;
 }
-
